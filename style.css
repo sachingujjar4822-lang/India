@@ -1,0 +1,108 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e5e9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+#quiz-container {
+    margin-top: 1.5rem;
+}
+
+#question {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+#options-container button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#options-container button:hover {
+    background-color: #d1d9e6;
+    transform: translateY(-2px);
+}
+
+#next-btn, #restart-btn {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e3a8a;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background-color: #162a63;
+    transform: translateY(-2px);
+}
+
+/* सही जवाब के लिए स्टाइल */
+.correct {
+    background-color: #28a745 !important;
+    color: #fff !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* गलत जवाब के लिए स्टाइल */
+.incorrect {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ऑप्शन को डिसेबल करने के लिए */
+.option-btn:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* रिजल्ट कंटेनर के लिए स्टाइल */
+#result-container {
+    padding-top: 2rem;
+}
+#result-container h2 {
+    color: #1e3a8a;
+}
+#score {
+    font-weight: 600;
+}
